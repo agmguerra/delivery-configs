@@ -22,7 +22,11 @@ security:
             client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
             resource-ids: resources
             scope: read,write
-
+    jwt:
+        key-store: classpath:keystore.jks
+        key-store-password: letmein
+        key-pair-alias: mytestkey
+        key-pair-password: changeme
 spring:
     datasource:
         data: classpath:/sql/data.sql
